@@ -1,18 +1,24 @@
-var tableau = 0
+var compteur = 0;
+var joueurEnCours="";
 
-$('td').click(function(){
-		tableau++;		
-		tableau % 2 === 0 ? a = 'p2' : a = 'p1';
-	});
 
 
 
 $("td").click(function() {
-	if (a == "p1") { 
-		$(this).css("background","white url(rond.png) no-repeat center");
-	}else{	
-		$(this).css("background","white url(croix.png) no-repeat center");     
+	
+	compteur++;		
+	joueurEnCours =   (compteur%2===0) ?  'p2' :  'p1';
+		
+		if (joueurEnCours === "p1") { 
+			$(this).css("background","white url(croix.png) no-repeat center");     
+		
+		}else{	
+			$(this).css("background","white url(rond.png) no-repeat center");
+	
 	}       
+	
+	//console.log(joueurEnCours);
+
 });
 
 
